@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A tiny private place for Raudah to send a signal.">
+  <meta property="og:title" content="A little note for you">
+  <meta property="og:description" content="A tiny private place for a little signal.">
+  <meta name="theme-color" content="#fff5f6">
+  <title>A little note for you</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <main id="main-content" class="site-shell">
+    <header class="topbar"><a class="brand" href="./" aria-label="Home"><span class="brand-mark">♡</span><span>just for you</span></a><div id="connection" class="connection" role="status">Checking connection</div></header>
+    <section class="hero" aria-labelledby="hero-title"><div class="hero-copy"><p class="kicker">a tiny place for us</p><h1 id="hero-title">I saved you<br><em>a little button.</em></h1><p class="hero-description">Tap a feeling and I will know you are thinking of me.</p></div><div class="hero-note" aria-label="A note from you"><span class="note-label">a little note</span><p>“You are my<br>favourite notification.”</p><span class="note-mark">♡ yours</span></div></section>
+    <section id="auth-card" class="panel auth-panel" aria-labelledby="auth-title"><div class="panel-heading"><p class="section-number">01</p><div><h2 id="auth-title">What is our little code?</h2><p class="muted">Four numbers, then you are in.</p></div></div><form id="auth-form" class="auth-form"><label>Our code<input id="access-code" type="password" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{4}" maxlength="4" required placeholder="• • • •"></label><button class="button button-primary" type="submit">Open our little space <span aria-hidden="true">♡</span></button></form><p id="auth-error" class="error" aria-live="polite"></p></section>
+    <section id="app-card" class="panel app-panel hidden" aria-labelledby="signal-title"><div class="panel-heading"><p class="section-number">02</p><div><h2 id="signal-title">How are you feeling?</h2><p id="welcome" class="muted"></p></div><button id="logout" class="quiet-button" type="button">Lock</button></div><div class="signal-grid" role="group" aria-label="Choose a signal"><button class="signal-card signal-miss" data-type="miss" type="button"><span class="signal-icon" aria-hidden="true">♡</span><span class="signal-name">I miss you</span><span class="signal-detail">A little hello from my heart</span><span class="signal-arrow" aria-hidden="true">↗</span></button><button class="signal-card signal-need" data-type="need" type="button"><span class="signal-icon" aria-hidden="true">✦</span><span class="signal-name">I need you</span><span class="signal-detail">Please be close when you can</span><span class="signal-arrow" aria-hidden="true">↗</span></button><button class="signal-card signal-call" data-type="call" type="button"><span class="signal-icon" aria-hidden="true">☏</span><span class="signal-name">Call me</span><span class="signal-detail">I want to hear your voice</span><span class="signal-arrow" aria-hidden="true">↗</span></button><button class="signal-card signal-urgent" data-type="urgent" type="button"><span class="signal-icon" aria-hidden="true">!</span><span class="signal-name">I need you now</span><span class="signal-detail">Please check in when you see this</span><span class="signal-arrow" aria-hidden="true">↗</span></button></div><form id="custom-form" class="custom-form"><label>Or write your own little note<textarea id="custom-message" maxlength="280" placeholder="A few words are enough…"></textarea></label><button class="button button-secondary" type="submit">Send my note <span aria-hidden="true">♡</span></button></form><p id="sent-state" class="sent-state" aria-live="polite"></p><div class="history-heading"><div><p class="section-number">03</p><h3>Little history</h3></div><button id="refresh" class="quiet-button" type="button">Refresh</button></div><div id="history" class="history"><p class="empty-state">Your little signals will appear here.</p></div></section>
+    <section class="tagline-reveal" aria-label="A reminder about this space"><p><span>One</span> <span>tiny</span> <span>button</span> <span>can</span> <span>say</span> <span>a</span> <span>lot</span><span class="period">.</span></p></section>
+    <footer><span>Made with a little bit of love.</span><button id="privacy-note" type="button">How private is it?</button></footer>
+  </main>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script><script src="firebase-config.js"></script><script src="app.js"></script>
+</body>
+</html>
